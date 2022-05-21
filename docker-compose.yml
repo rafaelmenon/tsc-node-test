@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  pgsql-tsc:
+    image: postgres:alpine
+    ports:
+      - "5456:5432"
+    container_name: "pgsql-tsc"
+    restart: always
+    volumes:
+      - ./data-tsc:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: pguser
+      POSTGRES_PASSWORD: pgpassword
+
+volumes:
+  data-tsc:
