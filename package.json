@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon --watch \"src/**\" --ext \"ts,json\" --exec \"ts-node ./src/bin/server.ts\"",
-    "build": "tsc"
+    "build": "tsc",
+    "test": "jest"
   },
   "dependencies": {
     "@prisma/client": "^3.14.0",
@@ -20,7 +21,9 @@
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "http": "^0.0.1-security",
+    "jest": "^28.1.0",
     "prisma": "^3.14.0",
+    "supertest": "^6.2.3",
     "typescript": "^4.6.4",
     "yup": "^0.32.11"
   },
